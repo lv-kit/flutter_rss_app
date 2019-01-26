@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rss/screen/splash_screen.dart';
+import 'package:flutter_rss/screen/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +22,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+//      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: SplashScreen(),
+      routes: <String, WidgetBuilder> {
+        '/home': (BuildContext context) => HomeScreen(),
+      }
     );
   }
 }
