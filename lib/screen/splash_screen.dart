@@ -34,11 +34,16 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 3))
-      .then((value) => handleTimeout());
+    loadData();
+
   }
 
-  void handleTimeout() {
-    Navigator.of(context).pushReplacementNamed('/home');
+  Future<Timer> loadData() async {
+    return Timer(Duration(seconds: 3), onDoneLoad);
   }
+
+  onDoneLoad() async {
+    Navigator.of(context).pushReplacementNamed("/home");
+  }
+
 }
