@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: Center(
           child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.blueAccent),
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
           ),
         ),
       ),
