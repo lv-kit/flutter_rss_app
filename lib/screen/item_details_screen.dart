@@ -27,7 +27,11 @@ class ItemDetailsScreen extends StatefulWidget {
 class _ItemDetailScreenState extends State<ItemDetailsScreen> {
   RssItem item;
 
-  Widget _widget = Text('wait...');
+  Widget _widget = Center(
+    child: CircularProgressIndicator(
+      valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
+    ),
+  );
   _ItemDetailScreenState({@required this.item});
 
   @override
