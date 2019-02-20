@@ -1,4 +1,4 @@
-package me.takehiro.flutterrss.flutterrss
+package me.takehiro.flutterrss
 
 import android.os.Bundle
 
