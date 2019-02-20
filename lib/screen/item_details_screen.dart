@@ -53,13 +53,12 @@ class _ItemDetailScreenState extends State<ItemDetailsScreen> {
   void getItem() async {
     Response res = await get(item.link);
     dom.Document doc = dom.Document.html(res.body);
-    print(doc);
-    dom.Element hBody = doc.querySelector('.hbody');
-    print(hBody.text);
-    dom.Element hTitle = doc.querySelector('.newsTitle a');
-    print(hTitle.text);
-    dom.Element newsLink = doc.querySelector('.newsLink');
-    print(newsLink.attributes['href']);
+    dom.Element hBody = doc.querySelector('.tpcNews_summary');
+//    print(hBody.text);
+    dom.Element hTitle = doc.querySelector('.tpcNews_title');
+//    print(hTitle.text);
+    dom.Element newsLink = doc.querySelector('.tpcNews_detailLink a');
+//    print(newsLink.attributes['href']);
     setState(() {
       _widget = SingleChildScrollView(
         child: Container(
